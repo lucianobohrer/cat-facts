@@ -3,7 +3,7 @@ import Foundation
 import ComposableArchitecture
 
 protocol CatFactServiceProtocol {
-    func factApi() -> Effect<String, ApiError>
+    func factApi() -> SignalProducer<String, ApiError>
 }
 
 final class CatFactService: CatFactServiceProtocol {

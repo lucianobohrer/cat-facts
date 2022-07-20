@@ -21,9 +21,9 @@ final class CatFactViewController: UIViewController {
         return view
     }()
 
-    let viewStore: ViewStore<CatFactState, CatFactAction>
+    let viewStore: ViewStore<CatFact.State, CatFact.Action>
 
-    init(store: Store<CatFactState, CatFactAction>) {
+    init(store: Store<CatFact.State, CatFact.Action>) {
         self.viewStore = ViewStore(store)
         super.init(nibName: nil, bundle: nil)
     }
@@ -55,15 +55,6 @@ final class CatFactViewController: UIViewController {
     }
 
     private func setupBinds() {
-//        let clickEvents = refreshButton.reactive
-//            .controlEvents(.touchUpInside)
-//            .producer
-//            .map({ _ in })
-//
-//        let outputs = viewModel.bind(refreshAction: clickEvents)
-//
-//        factLabel.reactive.text <~ outputs.facts
-
         refreshButton.reactive
             .controlEvents(.touchUpInside)
             .producer.startWithValues { _ in
@@ -71,7 +62,6 @@ final class CatFactViewController: UIViewController {
             }
 
         factLabel.reactive.text <~ viewStore.produced.fact
-//        refreshButton.reactive.title(for: .normal) <~ viewStore.produced.buttonTitle
     }
 }
 

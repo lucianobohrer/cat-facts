@@ -52,8 +52,6 @@
 		ADC5D5F52874AA8A005ADD82 /* CatFactsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatFactsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADC5D5F92874AA8A005ADD82 /* CatFactsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFactsUITests.swift; sourceTree = "<group>"; };
 		ADC5D5FB2874AA8A005ADD82 /* CatFactsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFactsUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		ADC5D6082874AA97005ADD82 /* CatFactWithVMViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatFactWithVMViewController.swift; sourceTree = "<group>"; };
-		ADC5D6092874AA97005ADD82 /* CatFactViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatFactViewModel.swift; sourceTree = "<group>"; };
 		ADC5D6122874BEA9005ADD82 /* CatFactService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFactService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,9 +115,7 @@
 			children = (
 				ADC5D5D82874AA88005ADD82 /* AppDelegate.swift */,
 				ADC5D5DA2874AA88005ADD82 /* SceneDelegate.swift */,
-				ADC5D6082874AA97005ADD82 /* CatFactWithVMViewController.swift */,
 				AD00FB362887B5A200DCA00E /* CatFactViewController.swift */,
-				ADC5D6092874AA97005ADD82 /* CatFactViewModel.swift */,
 				AD00FB342887B2BE00DCA00E /* CatFact.swift */,
 				ADC5D6122874BEA9005ADD82 /* CatFactService.swift */,
 				ADC5D5E12874AA89005ADD82 /* Assets.xcassets */,

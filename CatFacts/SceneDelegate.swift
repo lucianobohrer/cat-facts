@@ -10,10 +10,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-            let store = Store(initialState: CatFactState(),
-                              reducer: catFactReducer,
-                              environment: CatFactEnvironment(mainQueue: QueueScheduler.main,
-                                                              catFact: {
+            let store = Store(initialState: CatFact.State(),
+                              reducer: CatFact.reducer,
+                              environment: CatFact.Environment(mainQueue: QueueScheduler.main,
+                                                               catFact: {
                                 CatFactService().factApi()
                               })
             )
