@@ -11,6 +11,7 @@
 		AD00FB332887B09B00DCA00E /* ReactiveCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = AD00FB322887B09B00DCA00E /* ReactiveCocoa */; };
 		AD00FB352887B2BE00DCA00E /* CatFact.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD00FB342887B2BE00DCA00E /* CatFact.swift */; };
 		AD00FB372887B5A200DCA00E /* CatFactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD00FB362887B5A200DCA00E /* CatFactViewController.swift */; };
+		AD00FB3D28889AF600DCA00E /* Konoha.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD00FB3C28889AF600DCA00E /* Konoha.swift */; };
 		ADC5D5D92874AA88005ADD82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC5D5D82874AA88005ADD82 /* AppDelegate.swift */; };
 		ADC5D5DB2874AA88005ADD82 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC5D5DA2874AA88005ADD82 /* SceneDelegate.swift */; };
 		ADC5D5E22874AA89005ADD82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADC5D5E12874AA89005ADD82 /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 /* Begin PBXFileReference section */
 		AD00FB342887B2BE00DCA00E /* CatFact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFact.swift; sourceTree = "<group>"; };
 		AD00FB362887B5A200DCA00E /* CatFactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFactViewController.swift; sourceTree = "<group>"; };
+		AD00FB3C28889AF600DCA00E /* Konoha.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Konoha.swift; sourceTree = "<group>"; };
 		ADC5D5D52874AA88005ADD82 /* CatFacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatFacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADC5D5D82874AA88005ADD82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADC5D5DA2874AA88005ADD82 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +91,44 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AD00FB3828889AA800DCA00E /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				AD00FB3928889AB600DCA00E /* CatFact */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		AD00FB3928889AB600DCA00E /* CatFact */ = {
+			isa = PBXGroup;
+			children = (
+				AD00FB362887B5A200DCA00E /* CatFactViewController.swift */,
+				AD00FB342887B2BE00DCA00E /* CatFact.swift */,
+				ADC5D6122874BEA9005ADD82 /* CatFactService.swift */,
+			);
+			path = CatFact;
+			sourceTree = "<group>";
+		};
+		AD00FB3A28889AD400DCA00E /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				ADC5D5D82874AA88005ADD82 /* AppDelegate.swift */,
+				ADC5D5DA2874AA88005ADD82 /* SceneDelegate.swift */,
+				ADC5D5E12874AA89005ADD82 /* Assets.xcassets */,
+				ADC5D5E32874AA89005ADD82 /* LaunchScreen.storyboard */,
+				ADC5D5E62874AA89005ADD82 /* Info.plist */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		AD00FB3B28889AE200DCA00E /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				AD00FB3C28889AF600DCA00E /* Konoha.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		ADC5D5CC2874AA88005ADD82 = {
 			isa = PBXGroup;
 			children = (
@@ -113,14 +153,9 @@
 		ADC5D5D72874AA88005ADD82 /* CatFacts */ = {
 			isa = PBXGroup;
 			children = (
-				ADC5D5D82874AA88005ADD82 /* AppDelegate.swift */,
-				ADC5D5DA2874AA88005ADD82 /* SceneDelegate.swift */,
-				AD00FB362887B5A200DCA00E /* CatFactViewController.swift */,
-				AD00FB342887B2BE00DCA00E /* CatFact.swift */,
-				ADC5D6122874BEA9005ADD82 /* CatFactService.swift */,
-				ADC5D5E12874AA89005ADD82 /* Assets.xcassets */,
-				ADC5D5E32874AA89005ADD82 /* LaunchScreen.storyboard */,
-				ADC5D5E62874AA89005ADD82 /* Info.plist */,
+				AD00FB3B28889AE200DCA00E /* Network */,
+				AD00FB3A28889AD400DCA00E /* Application */,
+				AD00FB3828889AA800DCA00E /* Features */,
 			);
 			path = CatFacts;
 			sourceTree = "<group>";
@@ -282,6 +317,7 @@
 			files = (
 				AD00FB372887B5A200DCA00E /* CatFactViewController.swift in Sources */,
 				ADC5D6132874BEA9005ADD82 /* CatFactService.swift in Sources */,
+				AD00FB3D28889AF600DCA00E /* Konoha.swift in Sources */,
 				AD00FB352887B2BE00DCA00E /* CatFact.swift in Sources */,
 				ADC5D5D92874AA88005ADD82 /* AppDelegate.swift in Sources */,
 				ADC5D5DB2874AA88005ADD82 /* SceneDelegate.swift in Sources */,
@@ -455,7 +491,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = J9EPMQT7JV;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CatFacts/Info.plist;
+				INFOPLIST_FILE = CatFacts/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -482,7 +518,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = J9EPMQT7JV;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CatFacts/Info.plist;
+				INFOPLIST_FILE = CatFacts/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  CatFacts
-//
-//  Created by Luciano Bohrer on 05/07/2022.
-//
-
 import UIKit
 
 @main

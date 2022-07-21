@@ -3,7 +3,11 @@ import ReactiveSwift
 import ReactiveCocoa
 import ComposableArchitecture
 
+// MARK: - CatFactViewController
 final class CatFactViewController: UIViewController {
+
+    // MARK: - Private attributes
+    // MARK: Views
     private lazy var factLabel: UILabel = {
         let view = UILabel(frame: .zero)
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -21,8 +25,10 @@ final class CatFactViewController: UIViewController {
         return view
     }()
 
-    let viewStore: ViewStore<CatFact.State, CatFact.Action>
+    // MARK: General attributes
+    private let viewStore: ViewStore<CatFact.State, CatFact.Action>
 
+    // MARK: - Lifecyle methods
     init(store: Store<CatFact.State, CatFact.Action>) {
         self.viewStore = ViewStore(store)
         super.init(nibName: nil, bundle: nil)
@@ -38,6 +44,7 @@ final class CatFactViewController: UIViewController {
         setupBinds()
     }
 
+    // MARK: - Private methods
     private func setupLayout() {
         view.backgroundColor = .white
         view.addSubview(factLabel)
@@ -61,7 +68,7 @@ final class CatFactViewController: UIViewController {
                 self.viewStore.send(.getFactButtonClicked)
             }
 
-        factLabel.reactive.text <~ viewStore.produced.fact
+        factLabel.reactive.text <~ viewStore.produced.fact.fact
     }
 }
 
